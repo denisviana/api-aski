@@ -24,6 +24,8 @@ namespace api_aski.Model
         public bool WantToHelp { get; set; }
         public ICollection<Discipline> HasDomainIn { get; set; }
         public ICollection<Discipline> HasDificultyIn { get; set; }
+        public ICollection<Question> IAsked { get; set; }
+        public ICollection<Question> AskedMe { get; set; }
 
     }
 }

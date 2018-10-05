@@ -69,7 +69,10 @@ namespace aski_api.Controllers
         [Route("api/users/create")]
         public HttpResponseMessage CreateUser([FromBody] User user)
         {
-           
+
+            if (_dbContext.Users.FirstOrDefault(u => u.Email.Equals(user.Email, StringComparison.CurrentCultureIgnoreCase)) != null)
+                return Request.CreateResponse(HttpStatusCode.Conflict);
+
             user.Id = Guid.NewGuid().ToString();
 
             var hasDificultyIn = new List<Discipline>();

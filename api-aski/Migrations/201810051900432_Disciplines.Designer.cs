@@ -7,13 +7,13 @@ namespace api_aski.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Users : IMigrationMetadata
+    public sealed partial class Disciplines : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Users));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Disciplines));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810051542255_Users"; }
+            get { return "201810051900432_Disciplines"; }
         }
         
         string IMigrationMetadata.Source
