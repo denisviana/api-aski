@@ -40,5 +40,63 @@ namespace api_aski.Controllers
             return Ok(question);
         }
 
+        [HttpGet]
+        [Route("api/questions")]
+        public IHttpActionResult GetAll()
+        {
+
+            var questions = _dbContext.Questions
+                .Include("WhoAsks")
+                .Include("WhoResponds")
+                .ToList();           
+
+            return Ok(questions);
+        }
+
+
+        [HttpDelete]
+        [Route("api/questions/{id}")]
+        public IHttpActionResult Delete(string id)
+        {
+
+            var item = _dbContext.Questions.FirstOrDefault(d => d.Id.Equals(id));
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            _dbContext.Questions.Remove(item);
+            _dbContext.SaveChanges();
+
+            return Ok();
+
+        }
+
+        [HttpPut]
+        [Route("api/questions/{id}")]
+        public IHttpActionResult Update(Question quetion, string id)
+        {
+
+            var item = _dbContext.Questions.FirstOrDefault(d => d.Id.Equals(id));
+
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            item.Id = quetion.Id;
+            item.Content = quetion.Content;
+            item.WhoAsks = quetion.WhoAsks;
+            item.WhoResponds = quetion.WhoResponds;
+
+            _dbContext.Questions.Attach(item);
+            _dbContext.Entry(item).State = System.Data.Entity.EntityState.Modified;
+            _dbContext.SaveChanges();
+
+            return Ok();
+
+        }
+
     }
 }

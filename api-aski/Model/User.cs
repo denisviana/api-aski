@@ -13,6 +13,9 @@ namespace api_aski.Model
         {
             this.HasDomainIn = new List<Discipline>();
             this.HasDificultyIn = new List<Discipline>();
+            this.IAsked = new List<Question>();
+            this.AskedMe = new List<Question>();
+
         }
 
         [Key]

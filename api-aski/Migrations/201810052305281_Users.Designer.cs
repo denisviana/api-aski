@@ -13,7 +13,7 @@ namespace api_aski.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810052217227_Users"; }
+            get { return "201810052305281_Users"; }
         }
         
         string IMigrationMetadata.Source

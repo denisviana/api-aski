@@ -201,13 +201,13 @@
     <Compile Include="Migrations\201810051900432_Disciplines.Designer.cs">
       <DependentUpon>201810051900432_Disciplines.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201810052217227_Users.cs" />
-    <Compile Include="Migrations\201810052217227_Users.Designer.cs">
-      <DependentUpon>201810052217227_Users.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201810052217580_Questions.cs" />
     <Compile Include="Migrations\201810052217580_Questions.Designer.cs">
       <DependentUpon>201810052217580_Questions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810052305281_Users.cs" />
+    <Compile Include="Migrations\201810052305281_Users.Designer.cs">
+      <DependentUpon>201810052305281_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Course.cs" />
@@ -310,11 +310,11 @@
     <EmbeddedResource Include="Migrations\201810051900432_Disciplines.resx">
       <DependentUpon>201810051900432_Disciplines.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201810052217227_Users.resx">
-      <DependentUpon>201810052217227_Users.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810052217580_Questions.resx">
       <DependentUpon>201810052217580_Questions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810052305281_Users.resx">
+      <DependentUpon>201810052305281_Users.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
