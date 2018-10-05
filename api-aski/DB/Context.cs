@@ -12,7 +12,7 @@ namespace api_aski.DB
 
         private static Context instance;
 
-        private Context() : base("AskiDb")
+        private Context() : base()
         {
         }
 
